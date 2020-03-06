@@ -9,7 +9,7 @@ public class main {
             int x = readint();
             String result = getResult(x);
             System.out.println(result);
-            String str = Integer.toString(x);
+
 
         }
 
@@ -18,14 +18,14 @@ public class main {
         }
 
         public static String getResult(int x) {
-            if (x==1) {
-                return "1 bochka";
+            if (x%10==1) {
+                return x + " bochka";
             }
-            if (x>=2 || x<5){
-                return (" bochki");
+            if (x%10>=2 && x%10<=4){
+                return x + " bochki";
             }
-            else {
-                return (String)x;
+            else{
+                return x + " bochek";
             }
         }
-    }
+}
